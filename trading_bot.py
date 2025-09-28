@@ -515,12 +515,13 @@ def run_ui():
     st.set_page_config(page_title='Crypto Multi‑TF Bot', layout='wide')
     st.title('🔍 Crypto Multi‑Timeframe Scanner & Backtester')
 
-# Friendly message if ccxt is missing
-if ccxt is None:
-    st.error("""ccxt is not installed. Please run:
+    # Friendly message if ccxt is missing
+    if ccxt is None:
+        st.error("""ccxt is not installed. Please run:
 
 `pip install -U ccxt`""")
-    st.stop()
+        st.stop()
+
     # Status bar
     with st.container():
         ex = LAST_FETCH_INFO.get('exchange')
@@ -672,6 +673,7 @@ if ccxt is None:
                     st.error(f'Backtest failed: {e}')
         else:
             st.info('Click **Run Backtest (15m)** to compute Sharpe/Drawdown/Trades for each symbol.')
+
 
 
 # -------------------------
