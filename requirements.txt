@@ -1,0 +1,9 @@
+streamlit==1.50.0
+pandas
+numpy
+matplotlib
+ccxt
+backtrader
+ta
+scikit-learn
+scipy
